@@ -60,3 +60,25 @@ Touchless device control (useful for elderly or disabled)
 Classroom/lab automation
 
 Voice-controlled lighting/fans
+
+Working Demo:
+Steps:
+Upload code to Arduino.
+
+Connect Bluetooth (HC-05) and relay module.
+
+Power up the system.
+
+On your phone:
+
+Open the voice control app
+
+Connect to HC-05
+
+Speak: "Light on"
+
+Arduino receives '1' → Relay turns ON → Device turns ON
+
+Speak: "Light off"
+
+Arduino receives '0' → Relay turns OFF → Device turns OFF
