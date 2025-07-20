@@ -1,0 +1,20 @@
+char command;
+
+void setup() {
+  Serial.begin(9600);       // Initialize Bluetooth communication
+  pinMode(8, OUTPUT);       // Device 1 (e.g., Light)
+  digitalWrite(8, LOW);     // Initially OFF
+}
+
+void loop() {
+  if (Serial.available()) {
+    command = Serial.read();
+
+    if (command == '1') {
+      digitalWrite(8, HIGH); // Turn ON device
+    }
+    else if (command == '0') {
+      digitalWrite(8, LOW);  // Turn OFF device
+    }
+  }
+}
